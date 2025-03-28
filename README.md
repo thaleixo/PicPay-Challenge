@@ -2,10 +2,21 @@
 
 **PicPay - Entrevista Java**
 
-**1. Regras de Negócio**
-- Crie a implementação para criação de Order (Pedido)
-- Na criação de Orders, permita que a Order só seja criada se a quantidade mínima 2 for atendida, caso contrário, exiba
-mensagem de erro para o usuário
+**1. Regras de Negócio - Criação de Order (Pedido)**
+Implemente a funcionalidade para criação de pedidos (Order), garantindo que apenas pedidos com quantidade mínima de 2 itens sejam aceitos.
+
+**Regras:**
+- Ao tentar criar um pedido, verifique se a quantidade total de itens é maior ou igual a 2.
+- Se a regra for atendida, o pedido deve ser criado normalmente.
+- Caso contrário, a operação deve ser interrompida e uma mensagem de erro clara deve ser retornada ao usuário, informando que a quantidade mínima exigida não foi atingida.
+Exemplo de Resposta de Erro:
+
+```json
+{
+  "error": "INVALID_ORDER",
+  "message": "O pedido deve conter pelo menos 2 itens."
+}
+```
 
 **2. Testes unitários** 
 - Existem testes unitários que estão quebrando na classe OrderBookServiceImplTest. Crie a implementação correta para 
