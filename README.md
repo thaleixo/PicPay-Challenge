@@ -21,7 +21,7 @@ Exemplo de Resposta de Erro:
 **2. Testes unitários** 
 - Existem testes unitários que estão quebrando na classe OrderBookServiceImplTest. Crie a implementação correta para 
 resolver os problemas nos testes unitários
-- Crie testes unitários para a criação de Order (Pedido) contemplando a regra descrita
+- Crie testes unitários para a criação de Order (Pedido) contemplando a regra descrita acima
 
  
 
