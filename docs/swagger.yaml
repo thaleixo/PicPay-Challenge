@@ -1,0 +1,28 @@
+basePath: /
+host: interview-banking-pj.ms.qa
+info:
+  contact:
+    name: 'group:default/investimentos-pj'
+    url: https://picpay.atlassian.net/jira/software/c/projects/INVPJ/boards/10123
+  description: Entrevistas com os candidatos
+  termsOfService: http://swagger.io/terms/
+  title: interview-banking-pj
+  version: "1.0"
+paths:
+  /health:
+    get:
+      consumes:
+        - '*/*'
+      description: get the status of server.
+      produces:
+        - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            additionalProperties: true
+            type: object
+      summary: Show the status of server.
+      tags:
+        - root
+swagger: "2.0"
