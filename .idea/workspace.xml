@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="30e77699-3f32-4eac-b329-d3dba4336ad0" name="Changes" comment="setup: Ajuste README.md">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "order-book-challenge"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="setup: Criação do desafio order-book&#10;&#10;- Criação da classe application&#10;- Criação do service e implementação&#10;- Criação da estrutura dos testes&#10;- Criação e setup do pom.xml">
+      <option name="closed" value="true" />
+      <created>1743188999382</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1743188999382</updated>
+    </task>
+    <task id="LOCAL-00002" summary="setup: Ajuste README.md">
+      <option name="closed" value="true" />
+      <created>1743190128427</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1743190128427</updated>
+    </task>
+    <task id="LOCAL-00003" summary="setup: Ajuste README.md">
+      <option name="closed" value="true" />
+      <created>1743190834399</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1743190834399</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="setup: Criação do desafio order-book&#10;&#10;- Criação da classe application&#10;- Criação do service e implementação&#10;- Criação da estrutura dos testes&#10;- Criação e setup do pom.xml" />
+    <MESSAGE value="setup: Ajuste README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="setup: Ajuste README.md" />
+  </component>
+</project>
