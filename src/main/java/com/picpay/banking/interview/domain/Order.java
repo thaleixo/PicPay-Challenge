@@ -52,27 +52,27 @@ public class Order {
         private BigDecimal price;
         private Side side;
 
-        public OrderBuilder symbol(String symbol) {
+        public OrderBuilder symbol(final String symbol) {
             this.symbol = symbol;
             return this;
         }
 
-        public OrderBuilder quantity(int quantity) {
+        public OrderBuilder quantity(final int quantity) {
             this.quantity = quantity;
             return this;
         }
 
-        public OrderBuilder price(BigDecimal price) {
+        public OrderBuilder price(final BigDecimal price) {
             this.price = price;
             return this;
         }
 
-        public OrderBuilder side(Side side) {
+        public OrderBuilder side(final Side side) {
             this.side = side;
             return this;
         }
 
-        public OrderBuilder id(Integer id) {
+        public OrderBuilder id(final Integer id) {
             this.id = id;
             return this;
         }
