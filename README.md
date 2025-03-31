@@ -1,5 +1,5 @@
 # Order Book Challenge - Challenge PicPay
- Esse é um Desafio Técnico da Picpay , Que consistem em uma API para gerenciamento de ordens de compra e venda de ativos. A API permite criar, listar, atualizar e excluir ordens, além de validar a quantidade mínima de itens e buscar ordens por ID ou símbolo.
+ Esse é um Desafio Técnico da Picpay , Que consistem em uma API para gerenciamento de orders de compra e venda. A API permite criar, listar, atualizar e excluir orders, além de validar a quantidade mínima de itens e buscar orders por ID ou símbolo.
 
 ## Tecnologias Utilizadas
 
