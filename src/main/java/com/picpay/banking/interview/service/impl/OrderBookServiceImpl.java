@@ -92,6 +92,9 @@ public class OrderBookServiceImpl implements OrderBookService {
 
     @Override
     public Order updateOrder(Order order, OrderRequest request) {
+        if (!validateQuantityOrderBook(orderMapper.toDomain(request))) {
+            throw new InvalidOrderException("O pedido deve conter pelo menos 2 itens.");
+        }
         order.setSymbol(request.symbol());
         order.setQuantity(request.quantity());
         order.setPrice(request.price());
