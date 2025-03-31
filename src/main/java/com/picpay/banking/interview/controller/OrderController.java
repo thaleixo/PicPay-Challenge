@@ -87,6 +87,16 @@ public class OrderController {
         return ResponseEntity.noContent().build();
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<OrderResponse> updateOrder(@PathVariable Integer id,
+                                                     @Valid @RequestBody OrderRequest request) {
+        Order existingOrder = orderService.getOrderById(id)
+                .orElseThrow(() -> new OrderNotFoundException("Nenhum pedido com o id " + id + " encontrado"));
+
+        Order updatedOrder = orderService.updateOrder(existingOrder, request);
+        return ResponseEntity.ok(orderMapper.toResponse(updatedOrder));
+    }
+
     @ExceptionHandler(InvalidOrderException.class)
     public ResponseEntity<ErrorResponse> handleInvalidOrder(InvalidOrderException ex) {
         return ResponseEntity.badRequest()
