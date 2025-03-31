@@ -1,27 +1,108 @@
-# order-book-challenge
+# Order Book Challenge - Challenge PicPay
+ Esse é um Desafio para o desafio Tecnico da Picpay , Que consistem em uma API para gerenciamento de ordens de compra e venda de ativos. A API permite criar, listar, atualizar e excluir ordens, além de validar a quantidade mínima de itens e buscar ordens por ID ou símbolo.
 
-**PicPay - Entrevista Java**
+## Tecnologias Utilizadas
 
-**1. Regras de Negócio - Criação de Order (Pedido)**
-Implemente a funcionalidade para criação de pedidos (Order), garantindo que apenas pedidos com quantidade mínima de 2 itens sejam aceitos.
+- **Java 21**
+- **Spring Boot**
+- **PostgreSQL**
+- **Docker**
+- **JUnit 5** (Testes automatizados)
+- **Mockito** (Testes unitários)
+- **Lombok** (Simplificação do código)
 
-**Regras:**
-- Ao tentar criar um pedido, verifique se a quantidade total de itens é maior ou igual a 2.
-- Se a regra for atendida, o pedido deve ser criado normalmente.
-- Caso contrário, a operação deve ser interrompida e uma mensagem de erro clara deve ser retornada ao usuário, informando que a quantidade mínima exigida não foi atingida.
-Exemplo de Resposta de Erro:
+---
 
+## Configuração do Projeto
+
+### Pré-requisitos
+
+- **JDK 21**
+- **Maven 3+**
+- **Docker** (para rodar o banco de dados PostgreSQL)
+
+## Como Rodar a Aplicação
+
+### Passo 1: Subir o banco de dados com Docker
+```sh
+docker-compose up -d
+```
+
+### Passo 2: Compilar o projeto
+```sh
+mvn clean install
+```
+
+### Passo 3: Executar a aplicação
+```sh
+mvn spring-boot:run
+```
+
+---
+
+## Endpoints
+
+### Criar uma Ordem
+**POST** `/orders`
 ```json
 {
-  "error": "INVALID_ORDER",
-  "message": "O pedido deve conter pelo menos 2 itens."
+  "symbol": "GOOG",
+  "quantity": 10,
+  "price": 100.0,
+  "side": "BUY"
 }
 ```
 
-**2. Testes unitários** 
-- Existem testes unitários que estão quebrando na classe OrderBookServiceImplTest. Crie a implementação correta para 
-resolver os problemas nos testes unitários
-- Crie testes unitários para a criação de Order (Pedido) contemplando a regra descrita acima
+### Buscar Ordem por ID
+**GET** `/orders/{id}`
 
- 
+### Listar Todas as Ordens
+**GET** `/orders`
+
+### Listar Ordens por Símbolo
+**GET** `/orders/symbol/{symbol}`
+
+### Atualizar Ordem
+**PUT** `/orders/{id}`
+```json
+{
+  "symbol": "GOOG",
+  "quantity": 15, # Alterando de 10 para 15
+  "price": 105.00,
+  "side": "SELL"
+}
+```
+
+### Deletar Ordem
+**DELETE** `/orders/{id}`
+
+---
+
+## Testes Automatizados
+
+
+Para rodar os testes:
+```sh
+mvn test
+```
+
+---
+
+## Estrutura do Projeto
+
+```
+📂 src
+ ├── 📂 main
+ │   ├── 📂 java/com/picpay/banking/interview
+ │   │   ├── 📂 controller (Controladores REST)
+ │   │   ├── 📂 domain (Modelos de Dados)
+ │   │	 ├───── 📂 repository (Camada de Persistência)
+ │   │   ├── 📂 dto (Objetos de Transferência de Dados)
+ │   │   ├── 📂 exceptions (Tratamento de Erros)
+ │   │   ├── 📂 service (Regras de Negócio)
+ │   ├── 📂 resources (Configurações e Migrations)
+ │
+ ├── 📂 test (Testes Unitários)
+```
+
 
