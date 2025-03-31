@@ -152,7 +152,7 @@ class OrderBookControllerTest {
 
         ResponseEntity<?> response = orderController.deleteOrderById(1);
 
-        assertEquals(HttpStatus.NO_CONTENT, response.getStatusCode());
+        assertEquals(HttpStatus.OK, response.getStatusCode());
         verify(orderService).deleteOrderById(1);
     }
 
