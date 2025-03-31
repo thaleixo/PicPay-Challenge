@@ -84,7 +84,7 @@ public class OrderController {
         }
 
         orderService.deleteOrderById(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok().body("Pedido com o id " + id + " Deletado com sucesso.");
     }
 
     @PutMapping("/{id}")
